@@ -1,0 +1,32 @@
+.newslink {
+    text-decoration: none;
+    color: turquoise;
+}
+
+.nodeclink {
+    text-decoration: none;
+    
+}
+
+.dark-mode {
+    background-color: #36454F;
+    color: #f0f0f0;
+    transition: all 0.4s ease-in;
+}
+
+body {
+    background-color: white;
+    transition: all 0.4s ease-in;
+
+}
+
+#map {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 8px;
+    
+    width: 100%;  
+    max-width: 80vw;
+    height: 300px;
+    max-height: 40vh;
+  }

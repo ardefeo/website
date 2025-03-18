@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony DeFeo - Web Developer</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Custom stylesheet in case I want to override Bootstrap -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta name="description" content="Personal website of Anthony DeFeo, showing off multiple linked pages for my web development stuff">
+</head>
+
+<body>
+    <!-- Bootstrap classes for a dark-colored nav bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> 
+        <div class="container">
+            <a href="#" class="navbar-brand">Anthony DeFeo</a>
+            <span class="navbar-text text-nowrap collapse navbar-collapse">Front-end web developer in training</span>
+            <!-- Navigation in here so it collapses into hamburger menu on smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span> <!-- Needed for hamburger menu -->
+            </button>
+            <div class="collapse navbar-collapse text-nowrap" id="navmenu"> <!-- Navbar items -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Anthony</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/anthony-r-defeo/" class="nav-link">Anthony's LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+                            <label class="btn btn-outline-secondary" id="mode-status" for="btn-check-2-outlined">The lights are on!</label><br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="p-5 text-center">
+        <div class="container">
+            <h2>Want to see some of my work? (apart from this website)</h2><br>
+            <h3><a href="https://github.com/ardefeo" class="nodeclink"><i class="bi bi-github"></i> View my work on GitHub</a></h3>
+            <h3><a href="https://codepen.io/adefeo" class="nodeclink"><i class="bi bi-code-square"></i> View my work on CodePen</a></h3><br>
+            More to come soon!
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center text-light fixed-bottom mt-5">
+        <div class="text-center p-3">
+        &copy; 2023-25 Anthony DeFeo
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

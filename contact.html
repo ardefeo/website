@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony DeFeo - Web Developer</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Custom stylesheet in case I want to override Bootstrap -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta name="description" content="Personal website of Anthony DeFeo, showing off multiple linked pages for my web development stuff">
+
+    <!-- Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body>
+    <!-- Bootstrap classes for a dark-colored nav bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> 
+        <div class="container">
+            <a href="#" class="navbar-brand">Anthony DeFeo</a>
+            <span class="navbar-text text-nowrap collapse navbar-collapse">Front-end web developer in training</span>
+            <!-- Navigation in here so it collapses into hamburger menu on smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span> <!-- Needed for hamburger menu -->
+            </button>
+            <div class="collapse navbar-collapse text-nowrap" id="navmenu"> <!-- Navbar items -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Anthony</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/anthony-r-defeo/" class="nav-link">Anthony's LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+                            <label class="btn btn-outline-secondary" id="mode-status" for="btn-check-2-outlined">The lights are on!</label><br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="p-5">
+        <!-- Contact form -->
+        <div class="container">
+            
+            <div class="row justify-content-center align-items-center" id="contact">
+                
+                <div class="col-md">
+                    <h4>Want to get in touch?</h4>
+                    <form action="https://submit-form.com/VExSN1PWF">
+                        <div class="mb-2">
+                            <label for="uname" class="form-label">Your name: </label>
+                            <input type="text" size="40" class="form-control" id="uname" name="uname">
+                        </div>
+                        <div class="mb-2">
+                            <label for="umail" class="form-label">Your email address: </label>
+                            <input type="email" class="form-control" id="umail" name="umail">
+                        </div>
+                        <div class="mb-2">
+                            <label for="briefmessage" class="form-label">A brief message:</label>
+                            <textarea class="form-control" id="briefmessage" name="briefmessage" rows="3"></textarea>
+                          </div>
+                        <input type="hidden" name="_feedback.dark" value="true" />
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>  
+                </div>
+
+                <div class="col-md text-center">
+                    <figure class="figure">
+                        <img class="img-fluid figure-img w-75 mb-2 rounded-3 border border-2" src="img/cecil.jpg" alt="Picture of Cecil, my ginger cat.">
+                        <figcaption class="figure-caption text-center">Don't worry. Cecil monitors my inbox constantly.</figcaption>
+                    </figure>
+                </div>
+            </div>
+           <div class="text-center mt-5">
+            <h3 class="justify-content-center align-items-center"><a href="https://www.linkedin.com/in/anthony-r-defeo" class="nodeclink"><i class="bi bi-linkedin"></i> Connect with me on LinkedIn, as well!</a></h3>
+                <h4><br>Come visit my current hometown of Ocala, the Horse Capital of Florida! (If this site is buggy, blame Pinecastle)</h4>
+            <br>
+            
+            <div class="text-center justify-content-center align-items-center" id="map"></div>
+        <script>
+
+        const map = L.map('map').setView([29.187199, -82.140091], 11); // lat, long and zoom level
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        function onMapClick(e) {
+        alert("If you'd like to destroy this area, kindly set targeting coordinates to " + e.latlng); // FBI agent: this is a joke
+}       
+        map.on('click', onMapClick);
+        </script>
+
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center text-light fixed-bottom mt-5">
+        <div class="text-center p-3">
+        &copy; 2023-25 Anthony DeFeo
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="scripts/script.js"></script> 
+</body>
+</html>
